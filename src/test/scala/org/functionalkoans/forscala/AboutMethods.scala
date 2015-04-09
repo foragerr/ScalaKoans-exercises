@@ -158,7 +158,7 @@ class AboutMethods extends KoanSuite {
     def add(a:Int, b:Int) = a + b //implied return type of Int!
     def performSideEffect():Unit = System.currentTimeMillis
 
-    add(4,6) should be (__)
+    add(4,6) should be (10)
     performSideEffect() //Notice the parenthesis, since the method we called is Unit!
   }
 
@@ -171,7 +171,7 @@ class AboutMethods extends KoanSuite {
     }
 
     val foo = new Foo(9)
-    10 ~: foo should be (__)
-    foo.~:(40) should be (__)
+    10 ~: foo should be (22)
+    foo.~:(40) should be (52)
   }
 }
